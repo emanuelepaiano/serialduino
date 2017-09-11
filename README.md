@@ -3,9 +3,9 @@ Yet another Arduino Serial libraries for Java - Work in  Progress.
 
 Support drivers:
 <ul>
-<li>COM Serial</li>
+<li>Com ports</li>
 <li>Tcp</li>
-<li>Bluetooth (Work in Progress)</li>
+<li>Bluetooth RFCOMM (Work in Progress)</li>
 </ul>
 
 Tested on Linux Mint 17. 
