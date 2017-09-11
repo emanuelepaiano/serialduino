@@ -1,7 +1,7 @@
 # Serialduino for Java
 Yet another Arduino Serial libraries for Java - Work in  Progress. 
 
-Support drivers:
+Supported:
 <ul>
 <li>Com ports</li>
 <li>Tcp</li>
