@@ -1,11 +1,11 @@
 # Serialduino for Java
-Yet another Arduino Serial libraries for Java. 
+Yet another Arduino Serial libraries for Java - Work in  Progress. 
 
 Support drivers:
 <ul>
-<li>Com serial port</li>
+<li>COM Serial</li>
 <li>Tcp</li>
-<li>Bluetooth</li>
+<li>Bluetooth (Work in Progress)</li>
 </ul>
 
 Tested on Linux Mint 17. 
