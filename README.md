@@ -1,4 +1,4 @@
-# serialduino
+# Serialduino for Java
 Yet another Arduino Serial libraries for Java
 
 ## Dependencies: 
