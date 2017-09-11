@@ -16,6 +16,9 @@ jSSC, for serial support driver - https://code.google.com/archive/p/java-simple-
 ## Install
 Import this code into your Eclipse project. You need include jssc.jar and jssc-2.7.0-javadoc.jar for serial support. 
 
+## Examples
+See src/org/serialduino/examples sources.
+
 ### License
 Apache 2.0 - http://www.apache.org/licenses/LICENSE-2.0
 
