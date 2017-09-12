@@ -1,5 +1,5 @@
 # Serialduino for Java v0.5
-Yet another Arduino Serial libraries for Java - Work in  Progress. 
+Yet another Arduino serial monitor for Java - Work in  Progress. 
 
 Supported links:
 <ul>
