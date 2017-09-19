@@ -9,7 +9,7 @@ Supported links:
 </ul>
 
 Tested on Linux Mint 17. 
-![alt tag](https://github.com/emanuelepaiano/espresso-freewifi-portal/blob/master/img/image.jpg)
+![alt tag](https://github.com/emanuelepaiano/serialduino/blob/master/img/image.jpg)
 
 ## Dependencies: 
 jSSC, for com support driver - https://code.google.com/archive/p/java-simple-serial-connector/
