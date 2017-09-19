@@ -1,5 +1,6 @@
 # Serialduino for Java v0.5
 Yet another Arduino serial monitor for Java - Work in  Progress. 
+<img src="https://github.com/emanuelepaiano/serialduino/blob/master/img/image.jpg">
 
 Supported links:
 <ul>
@@ -9,7 +10,6 @@ Supported links:
 </ul>
 
 Tested on Linux Mint 17. 
-![alt tag](https://github.com/emanuelepaiano/serialduino/blob/master/img/image.jpg)
 
 ## Dependencies: 
 jSSC, for com support driver - https://code.google.com/archive/p/java-simple-serial-connector/
