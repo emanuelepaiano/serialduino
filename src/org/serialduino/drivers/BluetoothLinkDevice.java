@@ -17,59 +17,137 @@
 
 package org.serialduino.drivers;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+
+import javax.microedition.io.Connector;
+import javax.microedition.io.StreamConnection;
+
 /**
- * SerialDuino Bluetooth Port driver. Work in Progress!
+ * SerialDuino Bluetooth Port driver.
  * @author Emanuele Paiano 
  * https://emanuelepaiano.github.io
  * */
 public class BluetoothLinkDevice implements LinkDevice{
+	private String url;
+	private StreamConnection connection;
+	private InputStream in;
+	private OutputStream out;
+	private boolean isConnected=false;
+	
+	/**
+	 * Create Bluetooth Link
+	 * @param url URL bluetooth service like btspp://[ADDRESS]:[CHANNEL | UUID]/[PARAMS]
+	 * 
+	 * */
+	public BluetoothLinkDevice(String url)
+	{
+		this.url=url;
+	}
 
+	public void finalize()
+	{
+		this.close();
+	}
+	
 	@Override
 	public int write(String data) {
-		logger.severe("Not implemented yet!");
-		return 0;
+		if(isReady())
+		{
+			for(int i=0;i<data.length();i++)
+			{
+		        try {
+					out.write(data.charAt(i));
+				} catch (IOException e) {
+					return 0;
+				}		       
+			}
+		}
+		return data.length();
 	}
 
 	@Override
 	public String read(int bytes) {
-		logger.severe("Not implemented yet!");
-		return null;
+		String buffer="";
+		if (isReady())
+			for (int i=0;i<bytes;i++)
+			{
+				try {
+					buffer+=String.valueOf(in.read());
+				} catch (IOException e) {
+					buffer=null;
+					break;
+				}
+			}
+		
+		return buffer;
 	}
 
 	@Override
 	public String read() {
-		logger.severe("Not implemented yet!");
+		String ch="";
+		String buffer="";
+		
+		if (this.isReady())
+		{
+			while(ch!="\n")
+			{
+				ch=read(1);
+				buffer+=ch;
+			}
+			return buffer;
+		}
 		return null;
 	}
 
 	@Override
 	public boolean open() {
-		logger.severe("Not implemented yet!");
-		return false;
+		try {
+			connection=(StreamConnection) Connector.open(this.url);
+			this.isConnected=true;
+			this.in=connection.openInputStream();
+			this.out=connection.openOutputStream();
+		} catch (IOException e) {
+			this.isConnected=false;
+			logger.severe("Error while connect to "+this.url);
+			logger.severe(e.getMessage());
+		}
+		return isConnected;
 	}
 
 	@Override
 	public boolean close() {
-		logger.severe("Not implemented yet!");
-		return false;
+		try {
+			in.close();
+			out.close();
+			connection.close();
+			isConnected=false;
+		} catch (IOException e) {
+			logger.severe("Error while closing connection: "+e.getMessage());
+			return false;
+		}
+		
+		return !isConnected;
 	}
 
 	@Override
 	public boolean isReady() {
-		logger.severe("Not implemented yet!");
-		return false;
+		return this.isConnected;
 	}
 
 	@Override
 	public boolean bufferAvailable() {
-		logger.severe("Not implemented yet!");
-		return false;
+		try {
+			return this.in.available()>0;
+		} catch (IOException e) {
+			return false;
+		}
 	}
 
 	@Override
 	public Object getDevice() {
-		logger.severe("Not implemented yet!");
-		return null;
+		return this.connection;
 	}
 
 }
