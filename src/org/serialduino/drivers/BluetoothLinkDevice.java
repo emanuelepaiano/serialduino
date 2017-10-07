@@ -74,7 +74,7 @@ public class BluetoothLinkDevice implements LinkDevice{
 			for (int i=0;i<bytes;i++)
 			{
 				try {
-					buffer+=String.valueOf(in.read());
+					buffer+=String.valueOf((char)in.read());
 				} catch (IOException e) {
 					buffer=null;
 					break;
