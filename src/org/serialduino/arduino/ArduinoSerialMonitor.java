@@ -95,11 +95,14 @@ public class ArduinoSerialMonitor {
 	 * */
 	public String receiveChar()
 	{	
+		String tmp=null;
 		if (port.isReady())
 		{
-			if (bufferAvailable())	return port.read(1);	
+			if (bufferAvailable())	
+					tmp=port.read(1);
+			
 		}
-		return null;
+		return tmp;
 	}
 	
 	
