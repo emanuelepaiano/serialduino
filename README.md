@@ -37,7 +37,6 @@ enter into serialduino/ directory and run "mvn package":
 
 add follow lines to your project's pom.xml:
 
-<pre>
 ```html
 
     <dependency>
@@ -46,7 +45,6 @@ add follow lines to your project's pom.xml:
   		<version>0.5-SNAPSHOT</version>
   	</dependency>
 ```
-</pre>
 
 ## Examples
 See src/serialduino/examples sources.
