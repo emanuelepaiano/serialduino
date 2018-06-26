@@ -20,6 +20,15 @@ Import this code into your Eclipse project.
 ### Maven
 
 You can run 'mvn package' to build target/serialduino-0.5.jar file. 
+Add next file to pom.xml:
+
+<pre>
+    <dependency>
+  		<groupId>serialduino</groupId>
+  		<artifactId>serialduino</artifactId>
+  		<version>0.5-SNAPSHOT</version>
+  	</dependency>
+</pre>
 
 ## Examples
 See src/serialduino/examples sources.
