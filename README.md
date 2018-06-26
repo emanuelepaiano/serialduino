@@ -14,8 +14,10 @@ Tested on Linux Mint 17.
 ## Dependencies: 
 jSSC, for com support driver - https://code.google.com/archive/p/java-simple-serial-connector/
 
-## Install
-Import this code into your Eclipse project.
+## Install library and import to another project
+
+### Standalone
+Download jSSC and <a href="https://github.com/emanuelepaiano/serialduino/releases">SerialDuino jar files</a>. Import this libraries into your Eclipse Build Path project.
 
 ### Maven
 
