@@ -39,11 +39,11 @@ add follow lines to your project's pom.xml:
 
 ```html
 
-    <dependency>
-  		<groupId>serialduino</groupId>
-  		<artifactId>serialduino</artifactId>
-  		<version>0.5-SNAPSHOT</version>
-  	</dependency>
+<dependency>
+    <groupId>serialduino</groupId>
+        <artifactId>serialduino</artifactId>
+        <version>0.5-SNAPSHOT</version>
+</dependency>
 ```
 
 ## Examples
