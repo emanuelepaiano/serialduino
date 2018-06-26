@@ -14,13 +14,11 @@
  * limitations under the License.
  * */
 
-package org.serialduino.settings;
+package serialduino.settings;
 
-public class DefaultComLinkDevice {
-	
+public class DefaultLinkDevice {
 	/**
-	 * Empty OutputBuffer delay
+	 * set true for output LOGS
 	 * */
-	public static long DELAY_SEND=20;
-
+	public static boolean VERBOSE_MODE=true;
 }

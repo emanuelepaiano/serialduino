@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * */
-package org.serialduino.examples;
+package serialduino.examples;
 
 public class BluetoothSerialEcho {
 	//WORK IN PROGRESS

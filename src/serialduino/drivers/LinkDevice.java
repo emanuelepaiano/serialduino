@@ -14,7 +14,7 @@
  * limitations under the License.
  * */
 
-package org.serialduino.drivers;
+package serialduino.drivers;
 
 import java.util.logging.Logger;
 

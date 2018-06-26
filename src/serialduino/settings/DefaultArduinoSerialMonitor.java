@@ -14,11 +14,19 @@
  * limitations under the License.
  * */
 
-package org.serialduino.settings;
+package serialduino.settings;
 
-public class DefaultLinkDevice {
+import serialduino.arduino.ArduinoSerialMonitor;
+
+public class DefaultArduinoSerialMonitor {
+
 	/**
-	 * set true for output LOGS
+	 * Default End char termination
 	 * */
-	public static boolean VERBOSE_MODE=true;
+	public static final String END_WITH=ArduinoSerialMonitor.NL_END;
+	
+	/**
+	 * delay after open() for wait arduino booting 
+	 * */
+	public static final long ARDUINO_BOOT=2000;
 }

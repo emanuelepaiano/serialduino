@@ -14,10 +14,10 @@
  * limitations under the License.
  * */
 
-package org.serialduino.drivers;
+package serialduino.drivers;
 
-import org.serialduino.settings.DefaultComLinkDevice;
-import org.serialduino.settings.DefaultLinkDevice;
+import serialduino.settings.DefaultComLinkDevice;
+import serialduino.settings.DefaultLinkDevice;
 
 import jssc.SerialPort;
 import jssc.SerialPortException;

@@ -14,7 +14,7 @@
  * limitations under the License.
  * */
 
-package org.serialduino.drivers;
+package serialduino.drivers;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,7 +23,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import org.serialduino.settings.DefaultLinkDevice;
+import serialduino.settings.DefaultLinkDevice;
 
 /**
  * SerialDuino TCP/IP Port driver

@@ -6,7 +6,7 @@ Supported links:
 <ul>
 <li>COM ports</li>
 <li>TCP/IP</li>
-<li>Bluetooth RFCOMM (Work in Progress)</li>
+<li>Bluetooth RFCOMM (not implemented yet, will be supported on v1.0)</li>
 </ul>
 
 Tested on Linux Mint 17. 
