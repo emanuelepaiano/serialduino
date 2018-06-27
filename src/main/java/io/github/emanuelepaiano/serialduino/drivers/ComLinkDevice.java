@@ -14,10 +14,10 @@
  * limitations under the License.
  * */
 
-package serialduino.drivers;
+package io.github.emanuelepaiano.serialduino.drivers;
 
-import serialduino.settings.DefaultComLinkDevice;
-import serialduino.settings.DefaultLinkDevice;
+import io.github.emanuelepaiano.serialduino.settings.DefaultComLinkDevice;
+import io.github.emanuelepaiano.serialduino.settings.DefaultLinkDevice;
 
 import jssc.SerialPort;
 import jssc.SerialPortException;
@@ -143,7 +143,7 @@ public class ComLinkDevice implements LinkDevice{
 	 * @throws SerialPortException
 	 * @throws InterruptedException
 	 * */
-	@Override
+	
 	public int write(String data) {
 		if (isReady()) 
 		{
@@ -169,7 +169,7 @@ public class ComLinkDevice implements LinkDevice{
 	 * @return String data if success, null otherwise
 	 * @throws SerialPortException
 	 * */
-	@Override
+	
 	public String read(int bytes) {
 		String temp;
 		if (isReady() && bufferAvailable()) 
@@ -189,7 +189,7 @@ public class ComLinkDevice implements LinkDevice{
 	 * @return String data if success, null otherwise
 	 * @throws SerialPortException
 	 * */
-	@Override
+	
 	public String read() {
 		String temp;
 		if (this.isReady()  && bufferAvailable()) 
@@ -209,7 +209,7 @@ public class ComLinkDevice implements LinkDevice{
 	 * @return true if success, false otherwise
 	 * @throws SerialPortException
 	 * */
-	@Override
+	
 	public boolean open() {
 		try {
 			boolean res=port.openPort();
@@ -229,7 +229,7 @@ public class ComLinkDevice implements LinkDevice{
 	 * @return true if success, false otherwise
 	 * @throws SerialPortException
 	 * */
-	@Override
+	
 	public boolean close() {
 		try {
 			return port.closePort();
@@ -256,12 +256,12 @@ public class ComLinkDevice implements LinkDevice{
 	/**
 	 * @return true if port ready to write/read, false otherwise
 	 * */
-	@Override
+	
 	public boolean isReady() {
 		return port.isOpened();
 	}
 
-	@Override
+	
 	public boolean bufferAvailable() {
 		try {
 			return port.getInputBufferBytesCount()>0;
@@ -271,7 +271,7 @@ public class ComLinkDevice implements LinkDevice{
 		}
 	}
 
-	@Override
+	
 	public SerialPort getDevice(){	
 		return port;
 	}

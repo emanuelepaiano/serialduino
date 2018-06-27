@@ -13,14 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * */
-package serialduino.examples;
 
-public class BluetoothSerialEcho {
-	//WORK IN PROGRESS
-	
-	public static void main(String[] args)
-	{	
-		
-	}
-	
+package io.github.emanuelepaiano.serialduino.settings;
+
+public class DefaultLinkDevice {
+	/**
+	 * set true for output LOGS
+	 * */
+	public static boolean VERBOSE_MODE=true;
 }

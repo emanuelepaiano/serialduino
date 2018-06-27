@@ -14,13 +14,19 @@
  * limitations under the License.
  * */
 
-package serialduino.settings;
+package io.github.emanuelepaiano.serialduino.settings;
 
-public class DefaultComLinkDevice {
+import io.github.emanuelepaiano.serialduino.arduino.ArduinoSerialMonitor;
+
+public class DefaultArduinoSerialMonitor {
+
+	/**
+	 * Default End char termination
+	 * */
+	public static final String END_WITH=ArduinoSerialMonitor.NL_END;
 	
 	/**
-	 * Empty OutputBuffer delay
+	 * delay after open() for wait arduino booting 
 	 * */
-	public static long DELAY_SEND=20;
-
+	public static final long ARDUINO_BOOT=2000;
 }

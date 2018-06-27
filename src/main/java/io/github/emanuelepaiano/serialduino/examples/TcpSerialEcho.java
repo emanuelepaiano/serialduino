@@ -14,10 +14,10 @@
  * limitations under the License.
  * */
 
-package serialduino.examples;
+package io.github.emanuelepaiano.serialduino.examples;
 
-import serialduino.arduino.ArduinoSerialMonitor;
-import serialduino.drivers.TcpLinkDevice;
+import io.github.emanuelepaiano.serialduino.arduino.ArduinoSerialMonitor;
+import io.github.emanuelepaiano.serialduino.drivers.TcpLinkDevice;
 
 /**
  * Serialduino Serial Port Example using ESP8266 Wifi Monitor

@@ -14,7 +14,7 @@
  * limitations under the License.
  * */
 
-package serialduino.drivers;
+package io.github.emanuelepaiano.serialduino.drivers;
 
 import java.util.logging.Logger;
 

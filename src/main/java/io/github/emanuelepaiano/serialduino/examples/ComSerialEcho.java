@@ -14,11 +14,11 @@
  * limitations under the License.
  * */
 
-package serialduino.examples;
+package io.github.emanuelepaiano.serialduino.examples;
 import java.util.logging.Logger;
 
-import serialduino.arduino.ArduinoSerialMonitor;
-import serialduino.drivers.ComLinkDevice;
+import io.github.emanuelepaiano.serialduino.arduino.ArduinoSerialMonitor;
+import io.github.emanuelepaiano.serialduino.drivers.ComLinkDevice;
 
 /**
  * Serialduino Serial Port Example

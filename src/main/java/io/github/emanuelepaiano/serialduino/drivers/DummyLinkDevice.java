@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package serialduino.drivers;
+package io.github.emanuelepaiano.serialduino.drivers;
 
 /**
  * This is fake device for debug. It prints messages on console
@@ -24,7 +24,7 @@ public class DummyLinkDevice implements LinkDevice{
     private boolean connected=true;
     
     
-    @Override
+    
     public int write(String data) {
         if(!connected)
             return -1;
@@ -32,7 +32,7 @@ public class DummyLinkDevice implements LinkDevice{
         return data.length();
     }
 
-    @Override
+    
     public String read(int bytes) {
         if(!connected)
             return "read(): not connected";
@@ -40,7 +40,7 @@ public class DummyLinkDevice implements LinkDevice{
         return "read(): "+bytes;
     }
 
-    @Override
+    
     public String read() {
         if(!connected)
             return "read(): not connected";
@@ -48,32 +48,32 @@ public class DummyLinkDevice implements LinkDevice{
         return "read()";
     }
 
-    @Override
+    
     public boolean open() {
        System.out.println("open()");
        this.connected=true;
        return connected; 
     }
 
-    @Override
+    
     public boolean close() {
        System.out.println("close()");
        this.connected=false;
        return !connected; 
     }
 
-    @Override
+    
     public boolean isReady() {
        System.out.println("isReady(): "+connected);
        return connected; 
     }
 
-    @Override
+    
     public boolean bufferAvailable() {
         return this.connected;
     }
 
-    @Override
+    
     public Object getDevice() {
         return null;
     }

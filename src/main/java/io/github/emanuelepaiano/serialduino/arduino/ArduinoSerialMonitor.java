@@ -14,10 +14,10 @@
  * limitations under the License.
  * */
 
-package serialduino.arduino;
+package io.github.emanuelepaiano.serialduino.arduino;
 
-import serialduino.drivers.LinkDevice;
-import serialduino.settings.DefaultArduinoSerialMonitor;
+import io.github.emanuelepaiano.serialduino.drivers.LinkDevice;
+import io.github.emanuelepaiano.serialduino.settings.DefaultArduinoSerialMonitor;
 
 /**
  * SerialDuino. Arduino serial monitor

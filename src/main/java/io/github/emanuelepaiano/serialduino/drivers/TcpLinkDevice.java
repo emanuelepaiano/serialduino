@@ -14,7 +14,7 @@
  * limitations under the License.
  * */
 
-package serialduino.drivers;
+package io.github.emanuelepaiano.serialduino.drivers;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,7 +23,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import serialduino.settings.DefaultLinkDevice;
+import io.github.emanuelepaiano.serialduino.settings.DefaultLinkDevice;
 
 /**
  * SerialDuino TCP/IP Port driver
@@ -50,7 +50,7 @@ public class TcpLinkDevice implements LinkDevice{
 	}
 	
 	
-	@Override
+	
 	public int write(String data) {
 		writer.write(data);
 		return 0;
@@ -59,7 +59,7 @@ public class TcpLinkDevice implements LinkDevice{
 	/**
 	 * @throws IOException
 	 * */
-	@Override
+	
 	public String read(int bytes) {
 		String str=null;
 		char[] chList=new char[bytes];
@@ -77,7 +77,7 @@ public class TcpLinkDevice implements LinkDevice{
 		return str;
 	}
 
-	@Override
+	
 	public String read() {
 		try {
 			return reader.readLine();
@@ -92,7 +92,7 @@ public class TcpLinkDevice implements LinkDevice{
 	 * @throws IOException
 	 * @throws UnknownHostException
 	 * */
-	@Override
+	
 	public boolean open() {
 		try {
 			this.socket = new Socket(host, port);
@@ -114,7 +114,7 @@ public class TcpLinkDevice implements LinkDevice{
 	/**
 	 * @throws IOException
 	 * */
-	@Override
+	
 	public boolean close() {
 		try {
 			this.reader.close();
@@ -129,7 +129,7 @@ public class TcpLinkDevice implements LinkDevice{
 		return false;
 	}
 
-	@Override
+	
 	public boolean isReady() {
 		
 		return this.isConnected;
@@ -138,7 +138,7 @@ public class TcpLinkDevice implements LinkDevice{
 	/**
 	 * @throws IOException
 	 * */
-	@Override
+	
 	public boolean bufferAvailable() {
 		
 		try {
@@ -153,7 +153,7 @@ public class TcpLinkDevice implements LinkDevice{
 	/**
 	 * Get TCP Socket
 	 * */
-	@Override
+	
 	public Socket getDevice() {
 		return socket;
 	}
