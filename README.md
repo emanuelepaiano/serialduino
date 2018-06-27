@@ -43,8 +43,8 @@ add follow lines to your project's pom.xml:
 
 <dependency>
     <groupId>serialduino</groupId>
-        <artifactId>serialduino</artifactId>
-        <version>0.5</version>
+    <artifactId>serialduino</artifactId>
+    <version>0.5</version>
 </dependency>
 ```
 
