@@ -9,7 +9,7 @@ Supported links:
 <li>Bluetooth RFCOMM (under development, will be supported on v1.0)</li>
 </ul>
 
-Tested on Linux Mint 17. 
+Tested on Linux Mint 18. 
 
 ## Dependencies: 
 jSSC, for com support driver - https://code.google.com/archive/p/java-simple-serial-connector/
@@ -20,8 +20,6 @@ jSSC, for com support driver - https://code.google.com/archive/p/java-simple-ser
 Download jSSC and <a href="https://github.com/emanuelepaiano/serialduino/releases">SerialDuino jar files</a>. Import this libraries into your Eclipse Build Path project.
 
 ### Maven
-
-You can run 'mvn package' to build target/serialduino-0.5.jar file. 
 
 If you want to import SerialDuino into another Maven project, you can download this package by git:
 
@@ -42,9 +40,9 @@ add follow lines to your project's pom.xml:
 ```html
 
 <dependency>
-    <groupId>serialduino</groupId>
+    <groupId>io.github.emanuelepaiano</groupId>
     <artifactId>serialduino</artifactId>
-    <version>0.5</version>
+    <version>0.5.0</version>
 </dependency>
 ```
 

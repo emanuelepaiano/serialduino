@@ -20,10 +20,10 @@ import io.github.emanuelepaiano.serialduino.drivers.LinkDevice;
 import io.github.emanuelepaiano.serialduino.settings.DefaultArduinoSerialMonitor;
 
 /**
- * SerialDuino. Arduino serial monitor
+ * SerialDuino. Arduino serial monitor. 
  * @author Emanuele Paiano 
  * https://emanuelepaiano.github.io
- * @see DefaultArduinoSerialMonitor
+ * 
  * */
 public class ArduinoSerialMonitor {
 	
@@ -35,7 +35,7 @@ public class ArduinoSerialMonitor {
 	
 	
 	/**
-	 * New Line & Carriage Return value
+	 * New Line and Carriage Return value
 	 * */
 	public static String NLCR_END="\n\r";
 	
@@ -162,9 +162,10 @@ public class ArduinoSerialMonitor {
 	
 	
 	/**
-	 * Open connection on port and wait 2 seconds for Arduino Boot
+	 * Open connection on port and wait 2 seconds for Arduino Boot. 
+	 * See also DefaultArduinoSerialMonitor.ARDUINO_BOOT
 	 * @return true if success, false otherwise
-	 * @see DefaultArduinoSerialMonitor.ARDUINO_BOOT
+	 * 
 	 * */
 	public boolean open()
 	{

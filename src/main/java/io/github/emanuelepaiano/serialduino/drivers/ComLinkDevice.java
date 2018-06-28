@@ -140,8 +140,6 @@ public class ComLinkDevice implements LinkDevice{
 	/**
 	 * Write data to Serial Port
 	 * @return written bytes number if success, -1 otherwise
-	 * @throws SerialPortException
-	 * @throws InterruptedException
 	 * */
 	
 	public int write(String data) {
@@ -167,7 +165,6 @@ public class ComLinkDevice implements LinkDevice{
 	 * Read data from serial port
 	 * @param bytes bytes number to read from buffer
 	 * @return String data if success, null otherwise
-	 * @throws SerialPortException
 	 * */
 	
 	public String read(int bytes) {
@@ -187,7 +184,6 @@ public class ComLinkDevice implements LinkDevice{
 	/**
 	 * Read data from serial port
 	 * @return String data if success, null otherwise
-	 * @throws SerialPortException
 	 * */
 	
 	public String read() {
@@ -207,7 +203,6 @@ public class ComLinkDevice implements LinkDevice{
 	/**
 	 * Open a connection to serial port
 	 * @return true if success, false otherwise
-	 * @throws SerialPortException
 	 * */
 	
 	public boolean open() {
@@ -227,7 +222,6 @@ public class ComLinkDevice implements LinkDevice{
 	/**
 	 * Close serial port connection
 	 * @return true if success, false otherwise
-	 * @throws SerialPortException
 	 * */
 	
 	public boolean close() {

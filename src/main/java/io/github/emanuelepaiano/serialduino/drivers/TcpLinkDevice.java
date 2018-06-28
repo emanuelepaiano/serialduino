@@ -50,14 +50,20 @@ public class TcpLinkDevice implements LinkDevice{
 	}
 	
 	
-	
+	/**
+	 * Write data on buffer
+	 * @param data data to sent
+	 * @return sent bytes number
+	 * */
 	public int write(String data) {
 		writer.write(data);
-		return 0;
+		return data.length();
 	}
 
 	/**
-	 * @throws IOException
+	 * Read data from buffer
+	 * @param bytes bytes number to read
+	 * @return read string
 	 * */
 	
 	public String read(int bytes) {
@@ -77,7 +83,11 @@ public class TcpLinkDevice implements LinkDevice{
 		return str;
 	}
 
-	
+	/**
+	 * Read data from buffer
+	 * 
+	 * @return read string
+	 * */
 	public String read() {
 		try {
 			return reader.readLine();
@@ -89,10 +99,10 @@ public class TcpLinkDevice implements LinkDevice{
 	}
 
 	/**
-	 * @throws IOException
-	 * @throws UnknownHostException
+	 * Open connection to host:port
+	 * 
+	 * @return true if success, false otherwise
 	 * */
-	
 	public boolean open() {
 		try {
 			this.socket = new Socket(host, port);
@@ -112,7 +122,9 @@ public class TcpLinkDevice implements LinkDevice{
 	}
 
 	/**
-	 * @throws IOException
+	 * Close connection from remote host
+	 * 
+	 * @return true if success, false otherwise
 	 * */
 	
 	public boolean close() {
@@ -136,9 +148,9 @@ public class TcpLinkDevice implements LinkDevice{
 	}
 
 	/**
-	 * @throws IOException
+	 * Return true if there available data into buffer
+	 * 
 	 * */
-	
 	public boolean bufferAvailable() {
 		
 		try {
@@ -160,6 +172,7 @@ public class TcpLinkDevice implements LinkDevice{
 
 	/**
 	 * get TCP port
+	 * @return port number
 	 * */
 	public int getPort() {
 		return port;
@@ -175,6 +188,7 @@ public class TcpLinkDevice implements LinkDevice{
 
 	/**
 	 * get TCP host
+	 * @return host
 	 * */
 	public String getHost() {
 		return host;

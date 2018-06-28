@@ -22,11 +22,12 @@ import io.github.emanuelepaiano.serialduino.drivers.ComLinkDevice;
 
 /**
  * Serialduino Serial Port Example
- * Read/Write to Arduino Serial Port
+ * Read/Write to Arduino Serial Port. 
+ * For test, upload sketchs/serial_echo/serial_echo.ino
+ * to your board.
  * 
  * @author Emanuele Paiano - https://emanuelepaiano.github.io
  * 
- * @see sketchs/serial_echo/serial_echo.ino
  * 
  */
 public class ComSerialEcho {

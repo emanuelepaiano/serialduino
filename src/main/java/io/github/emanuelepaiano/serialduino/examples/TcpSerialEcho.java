@@ -21,11 +21,13 @@ import io.github.emanuelepaiano.serialduino.drivers.TcpLinkDevice;
 
 /**
  * Serialduino Serial Port Example using ESP8266 Wifi Monitor
- * Read/Write to Arduino Serial Port
+ * Read/Write to Arduino Serial Port. 
+ * For test, upload sketchs/serial_echo/serial_echo.ino
+ * to your board.
  * 
  * @author Emanuele Paiano - https://emanuelepaiano.github.io
  * 
- * @see sketchs/serial_echo/serial_echo.ino
+ * 
  * 
  */
 public class TcpSerialEcho {
