@@ -21,7 +21,22 @@ Download jSSC and <a href="https://github.com/emanuelepaiano/serialduino/release
 
 ### Maven
 
-If you want to import SerialDuino into another Maven project, you can download this package by git:
+If you want to import SerialDuino into another Maven project, you can 
+
+- Method 1: Add dependency to your pom.xml, and download dependencies from Maven Central Repository:
+```html
+
+<dependency>
+    <groupId>io.github.emanuelepaiano</groupId>
+    <artifactId>serialduino</artifactId>
+    <version>0.5.0</version>
+</dependency>
+```
+and build with "mvn clean package".
+
+- Method 2: offline maven install
+
+If you can't contact Maven repository, or you haven't Internet access, you can download this package by git:
 
 <pre>
 # git clone https://github.com/emanuelepaiano/serialduino.git
@@ -45,6 +60,8 @@ add follow lines to your project's pom.xml:
     <version>0.5.0</version>
 </dependency>
 ```
+
+don't forget to download jssc library too.
 
 ## Examples
 See src/serialduino/examples sources.
